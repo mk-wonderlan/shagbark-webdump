@@ -5,7 +5,6 @@ var http = require('http').Server(app);
 var path = require('path');
 var io = require('socket.io')(http);
 
-app.set('port', process.env.PORT || 3000);
 app.engine('html', require('ejs').renderFile);
 app.use(bodyParser.json())
 app.use(express.static(path.join(__dirname, 'public')));
@@ -22,6 +21,6 @@ app.post('/ircmessage',function(req, res)
     res.end();
 });
 
-http.listen(80, function(){
+http.listen(process.env.PORT, function(){
   console.log('listening on *:80');
 });
