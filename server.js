@@ -17,7 +17,6 @@ app.get('/', function(req, res){
 
 app.post('/ircmessage',function(req, res)
 {
-  console.log(req.body);
    io.emit('chat message', req.body.message);
    res.writeHead(200);
     res.end();
