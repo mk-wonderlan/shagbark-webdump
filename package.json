@@ -9,5 +9,9 @@
     "ejs": "~1.0.0",
     "socket.io": "~1.0.6",
     "body-parser": "~1.6.5"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.2.x"
   }
 }
